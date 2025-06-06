@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Day Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🗓️ Day Planner</h1>
+    <p class="date" id="currentDate"></p>
+
+    <div class="planner-sections">
+      <div class="today-section">
+        <h2>Today's Tasks</h2>
+        <div class="input-group">
+          <input type="text" id="taskName" placeholder="Enter task name" />
+
+          <div class="time-group">
+            <label>Start:
+              <input type="time" id="startTime" />
+              <select id="startMeridian">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="time-group">
+            <label>End:
+              <input type="time" id="endTime" />
+              <select id="endMeridian">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+            </label>
+          </div>
+
+          <button onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="taskList"></ul>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
